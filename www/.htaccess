@@ -8,6 +8,16 @@ Options +FollowSymlinks
 # Activation du module de réécriture d'URL :
 RewriteEngine on
 
-# --------------------------------------------------
+
+#--------------------------------------------------
+# ROUTES
+#--------------------------------------------------
+
+# ROUTE DES POSTS
+# PATTERN: /posts
+# URL : index.php
+RewriteRule ^posts$ index.php [L]
+
+#--------------------------------------------------
 RewriteCond %{REQUEST_URI} !\.(js|css|jpg|gif|zip|png|pdf)$ [NC]
-RewriteRule ^(.*)$ index.php [L]
+RewriteRule ^$ index.php [L]
