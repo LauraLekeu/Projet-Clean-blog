@@ -19,3 +19,16 @@ function indexAction(\PDO $connexion) {
   include '../app/vues/posts/index.php';
   $content = ob_get_clean();
 }
+
+
+function showAction(\PDO $connexion, int $id) {
+  // Demander la liste des posts au modèle
+  include_once '../app/modeles/postsModele.php';
+  $post = Post\findOneById($connexion, $id);
+  // Charger la vue index dans $content
+  GLOBAL $content, $title;
+  $title = $post['titre'];
+  ob_start();
+  include '../app/vues/posts/show.php';
+  $content = ob_get_clean();
+}

@@ -13,17 +13,15 @@
   </head>
   <body>
     <!-- Navigation -->
-      <?php include_once '../app/vues/template/partials/_nav.php'; ?>
+    <?php include_once '../app/vues/template/partials/_nav.php'; ?>
     <!-- CONTENU -->
-        <!-- Page Header -->
-        <?php include_once '../app/vues/template/partials/_header.php'; ?>
-        <!-- Textes -->
-      <?php include_once '../app/vues/template/partials/_main.php'; ?>
+    <main>
+    <?php echo $content; ?>
+    <hr>
+    </main>
     <!-- Footer -->
     <?php include_once '../app/vues/template/partials/_footer.php'; ?>
     <!-- Scripts -->
     <?php include_once '../app/vues/template/partials/_scripts.php'; ?>
-
   </body>
-
 </html>
