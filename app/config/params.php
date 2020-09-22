@@ -17,3 +17,4 @@ $title = '';
 
 // Textes
 define('TITRE_POST_INDEX', "Home");
+define('TITRE_ABOUT', "About");

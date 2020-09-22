@@ -13,6 +13,14 @@ RewriteEngine on
 # ROUTES
 #--------------------------------------------------
 
+# PAGE ABOUT
+# PATTERN: about
+# URL : index.php?about
+RewriteRule ^about$ index.php?about [L]
+
+
+# ROUTES DES POSTS --------------------------------
+
 # DETAIL D'UN POST
 # PATTERN: /posts/{id}-{slug}.html
 # URL : index.php?postId=x
