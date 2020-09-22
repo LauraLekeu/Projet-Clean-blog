@@ -5,13 +5,23 @@
 
 */
 
+// PAGE ABOUT
+// PATTERN: about
+// CTRL: -
+// ACTION: -
+
+if (isset($_GET['contact'])):
+  $title = TITRE_CONTACT;
+  ob_start(); // pas besoin de mettre global car on est dans le routeur, au même niveau que les parametres
+  include_once '../app/vues/template/partials/_contact.php';
+  $content = ob_get_clean();
 
 // PAGE ABOUT
 // PATTERN: about
-// CTRL: postsControleur
-// ACTION: showAction
+// CTRL: -
+// ACTION: -
 
-if (isset($_GET['about'])):
+elseif (isset($_GET['about'])):
   $title = TITRE_ABOUT;
   ob_start(); // pas besoin de mettre global car on est dans le routeur, au même niveau que les parametres
   include_once '../app/vues/template/partials/_about.php';

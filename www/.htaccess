@@ -13,6 +13,11 @@ RewriteEngine on
 # ROUTES
 #--------------------------------------------------
 
+# PAGE CONTACT
+# PATTERN: contact
+# URL : index.php?contact
+RewriteRule ^contact$ index.php?contact [L]
+
 # PAGE ABOUT
 # PATTERN: about
 # URL : index.php?about
