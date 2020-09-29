@@ -26,8 +26,8 @@
         <div class="col-lg-8 col-md-10 mx-auto">
 
           <div class="clearfix">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit placeat repudiandae maiores sequi nemo aliquid libero dolores ab debitis commodi, veniam fuga iste nulla impedit ea nam itaque optio, quibusdam.</p>
-            <p>Eveniet optio tempore beatae, nulla voluptatibus repudiandae, rem dolor, sunt neque perferendis pariatur. Placeat nobis explicabo, maxime soluta magnam ullam mollitia voluptatibus, quia in, autem molestias voluptatem ducimus fuga error.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit placeat repudiandae maiores sequi nemo.</p>
+            <p>Eveniet optio tempore beatae, nulla voluptatibus repudiandae, rem dolor, sunt neque perferendis pariatur.</p>
           </div>
 
           <!-- ADD A POST -->
@@ -36,24 +36,14 @@
           </div>
 
           <!-- POSTS LIST -->
-          <?php foreach ($posts as $post): ?>
-            <div class="post-preview">
-              <a href="posts/<?php echo $post['id']; ?>-<?php echo \Noyau\Fonctions\slugify($post['titre']); ?>.html">
-                <h2 class="post-title">
-                  <?php echo $post['titre']; ?>
-                </h2>
-                <h3 class="post-subtitle">
-                  <?php echo $post['sousTitre']; ?>
-                </h3>
-              </a>
-              <p class="post-meta">Posted on <?php echo date_format(date_create($post['datePublication']), "F d, Y"); ?></p>
-            </div>
-            <hr>
-          <?php endforeach; ?>
+          <div id="liste-posts">
+            <?php include '../app/vues/posts/liste.php'; ?>
+          </div>
+
 
           <!-- Pager -->
           <div class="clearfix">
-            <a class="btn btn-secondary float-right" href="#">Older Posts &rarr;</a>
+            <a class="btn btn-secondary float-right" id="older-posts" href="#">Older Posts &rarr;</a>
           </div>
 
         </div>

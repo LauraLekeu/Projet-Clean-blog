@@ -1,16 +1,28 @@
-<?php
+<?php  
 /*
 
       .app/routeur.php
 
 */
+// ROUTES AJAX -----------------------------------------------------------------
 
-// PAGE ABOUT
-// PATTERN: about
+// ROUTE CHARGEMENT POSTS SUIVANTS
+// PATTERN: /?older-posts
+// CTRL: postsControleur
+// ACTION: olderAction
+
+if (isset($_GET['ajax']) and $_GET['ajax']==='older-posts'):
+  include_once '../app/controleurs/postsControleur.php';
+  \App\Controleurs\Posts\ajaxOlderAction($connexion, $_GET['offset']);
+
+// ROUTES STANDARDS ---- --------------------------------------------------------
+
+// PAGE CONTACT
+// PATTERN: contact
 // CTRL: -
 // ACTION: -
 
-if (isset($_GET['contact'])):
+elseif (isset($_GET['contact'])):
   $title = TITRE_CONTACT;
   ob_start(); // pas besoin de mettre global car on est dans le routeur, au même niveau que les parametres
   include_once '../app/vues/template/partials/_contact.php';

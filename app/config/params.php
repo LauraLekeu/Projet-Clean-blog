@@ -14,6 +14,7 @@ define('USERPWD', 'root');
 // Zones dynamiques du template
 $content = '';
 $title = '';
+$scripts = '';
 
 // Textes
 define('TITRE_POST_INDEX', "Home");
