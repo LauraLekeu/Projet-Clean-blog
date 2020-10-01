@@ -14,4 +14,7 @@
 <!-- Custom scripts for this template -->
 <script src="js/clean-blog.min.js"></script>
 
+<script src="vendor/bootstrap-notify-master/bootstrap-notify.min.js"> </script>
+<script src="js/app.js"></script>
+
 <?php echo $scripts; ?>

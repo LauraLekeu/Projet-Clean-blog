@@ -1,21 +1,17 @@
-<?php  
+<?php
 /*
 
       .app/routeur.php
 
 */
+
 // ROUTES AJAX -----------------------------------------------------------------
 
-// ROUTE CHARGEMENT POSTS SUIVANTS
-// PATTERN: /?older-posts
-// CTRL: postsControleur
-// ACTION: olderAction
+if (isset($_GET['ajax'])): 
+  include_once '../app/routeurs/ajaxRouteur.php';
 
-if (isset($_GET['ajax']) and $_GET['ajax']==='older-posts'):
-  include_once '../app/controleurs/postsControleur.php';
-  \App\Controleurs\Posts\ajaxOlderAction($connexion, $_GET['offset']);
 
-// ROUTES STANDARDS ---- --------------------------------------------------------
+// ROUTES STANDARDS ------------------------------------------------------------
 
 // PAGE CONTACT
 // PATTERN: contact
@@ -57,6 +53,4 @@ elseif (isset($_GET['postId'])):
 else:
   include_once '../app/controleurs/postsControleur.php';
   \App\Controleurs\Posts\indexAction($connexion);
-
-
 endif;
